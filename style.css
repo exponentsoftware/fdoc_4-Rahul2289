@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #bbd2c5;
+  background: -webkit-linear-gradient(to right, #292e49, #536976, #bbd2c5);
+  background: linear-gradient(to right, #292e49, #536976, #bbd2c5);
+}
+.nav-container {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  color: white;
+  background-color: #292e49;
+  z-index: 1;
+}
+.logo {
+  padding-left: 60px;
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+}
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin-right: 1rem;
+  padding: 2px;
+}
+a:hover {
+  color: #bbd2c5;
+}
+nav .menu-btn {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  margin-left: auto;
+}
+#click {
+  display: none;
+}
+
+.content {
+  position: relative;
+  top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.name {
+  font-size: 2.5rem;
+  /* margin-left: 5rem; */
+}
+.content h3 {
+  font-size: 1.8rem;
+  /* margin-left: 5rem; */
+}
+.content span {
+  color: #b3315f;
+}
+.content img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 90%;
+  /* margin-right: 10rem; */
+}
+
+/*for mobile devices*/
+@media screen and (max-width: 700px) {
+  .list ul {
+    position: fixed;
+    display: block;
+    top: 50px;
+    left: -100%;
+    margin: 0;
+    background: #292e49;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  ul li {
+    padding: 10px 10px;
+  }
+
+  ul li a {
+    font-size: 20px;
+    display: block;
+  }
+  nav .menu-btn {
+    display: block;
+  }
+  #click:checked ~ .list ul {
+    left: 0;
+    margin: -1px;
+  }
+  .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .content img {
+    margin: 2.5rem;
+  }
+}
